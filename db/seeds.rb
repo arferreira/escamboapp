@@ -5,3 +5,24 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+puts "****************************************"
+puts " Create data initial for Categories on app"
+puts "****************************************"
+
+categories = ["Animais e Acessórios",
+              "Esportes",
+              "Para a sua casa",
+              "Eletrônicos e Celulares",
+              "Música e Hobbies",
+              "Bebês e Crianças",
+              "Moda e Beleza",
+              "Veículos e Barcos",
+              "Imóveis",
+              "Empregos e Negócios"]
+categories.each do |category|
+Category.find_or_create_by!(description: category)
+puts "Category: #{category} created was success!"
+end
+puts "\n"
+puts "Categories generated with success!"
+puts "****************************************"

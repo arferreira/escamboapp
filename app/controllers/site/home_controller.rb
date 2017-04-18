@@ -3,6 +3,6 @@ class Site::HomeController < ApplicationController
   #before_action :athenticate_member!
 
   def index
-
+    @categories = Category.all
   end
 end

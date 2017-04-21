@@ -2,3 +2,4 @@
   messages:
     confirm: Tem certeza?
     confirm_with: Tem certeza que deseja excluir <b>%{name}</b>
+    error_auth: Você não está autorizado a acessar este módulo!

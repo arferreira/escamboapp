@@ -1,17 +1,11 @@
-<div id="page-wrapper">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-12">
+
                 <h1 class="page-header"><%= action %></h1>
                 <% if @category.errors.any? %>
-                <div class="alert alert-danger alert-dismissable">
-                  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
                   <% @category.errors.full_messages.each do |message| %>
-                  <ul>
-                    <li><%= message %></li>
-                  </ul>
+                    <script>
+                    $.notify("<%= message %>", "error");
+                    </script>
                   <% end %>
-                  </div>
                   <% end %>
                 <div class="col-lg-6">
                   <%= form_for([:backoffice, @category]) do |f| %>
@@ -22,10 +16,3 @@
                 </div>
                 <% end %>
               </div>
-            </div>
-            <!-- /.col-lg-12 -->
-        </div>
-        <!-- /.row -->
-    </div>
-    <!-- /.container-fluid -->
-</div>

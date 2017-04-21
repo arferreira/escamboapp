@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
 
-  get 'backend', to: 'backoffice/dashboard#index'
+  get 'backoffice', to: 'backoffice/dashboard#index'
 
   namespace :backoffice do
   get 'dashboard', to: 'dashboard#index'
+  get 'admins/index'
   resources :categories, except: [:show, :destroy]
   end
 

@@ -20,6 +20,7 @@
             <th>#</th>
             <th>Nome</th>
             <th>Email</th>
+            <th>Tipo de Acesso</th>
             <th>Ações</th>
           </tr>
         </thead>
@@ -29,6 +30,7 @@
             <td><%= admin.id %></td>
             <td><%= admin.name %></td>
             <td><%= admin.email %></td>
+            <td><%= admin.role_br %></td>
             <td>
               <%= link_to  edit_backoffice_admin_path(admin.id), class: "btn btn-warning btn-circle" do %>
               <i class="fa fa-check"></i>

@@ -34,6 +34,8 @@ admin.email = "admin@admin.com"
 admin.name = "Antonio Ricardo"
 admin.password = "123456"
 admin.password_confirmation = "123456"
+admin.role = 0
+
 if admin.save
   puts "Admin created was success!"
 else

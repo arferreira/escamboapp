@@ -12,7 +12,7 @@ class Backoffice::AdminsController < BackofficeController
   def create
     @admin = Admin.new params_admin
     if @admin.save
-      redirect_to backoffice_admins_path, notice: "O Administrador #{@admin.email} foi criado com sucesso!"
+      redirect_to backoffice_admins_path, notice: "O Administrador #{@admin.name} foi criado com sucesso!"
     else
       render :new
     end
@@ -31,7 +31,7 @@ class Backoffice::AdminsController < BackofficeController
     end
 
     if @admin.update params_admin
-      redirect_to backoffice_admins_path, notice: "O Administrador #{@admin.email} foi atualizado com sucesso!"
+      redirect_to backoffice_admins_path, notice: "O Administrador #{@admin.name} foi atualizado com sucesso!"
     else
       render :edit
     end
@@ -39,7 +39,7 @@ class Backoffice::AdminsController < BackofficeController
 
   def destroy
   if @admin.destroy
-    redirect_to backoffice_admins_path, notice: "O Administrador #{@admin.email} foi deletado com sucesso!"
+    redirect_to backoffice_admins_path, notice: "O Administrador #{@admin.name} foi deletado com sucesso!"
   else
     render :index, notice: "Houve um erro ao apagar o administrador"
   end

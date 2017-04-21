@@ -31,6 +31,7 @@ puts "****************************************"
 
 admin = Admin.new
 admin.email = "admin@admin.com"
+admin.name = "Antonio Ricardo"
 admin.password = "123456"
 admin.password_confirmation = "123456"
 if admin.save

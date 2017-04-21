@@ -29,10 +29,14 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Rails gem of the Bootstrap based admin theme SB Admin 2. http://dreamingechoes.github.io/boots…
 gem 'bootstrap_sb_admin_base_v2'
 
+source 'https://rails-assets.org' do
+# bootbox js
+gem 'rails-assets-bootbox'
 # gem bootstrap
-gem 'rails-assets-bootstrap', '3.3.7', source: 'https://rails-assets.org'
+gem 'rails-assets-bootstrap', '3.3.7'
 # notifyJS
-gem 'rails-assets-notifyjs', source: 'https://rails-assets.org'
+gem 'rails-assets-notifyjs'
+end
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

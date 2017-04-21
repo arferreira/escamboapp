@@ -33,3 +33,8 @@
         </div>
     </div>
 </div>
+<% flash.each do |key, value| %>
+        <script>
+        $.notify("<%= value %>", "error");
+        </script>
+<% end %>

@@ -1,0 +1,22 @@
+
+                <h1 class="page-header"><%= action %></h1>
+                <% if @admin.errors.any? %>
+                  <% @admin.errors.full_messages.each do |message| %>
+                    <script>
+                    $.notify("<%= message %>", "error");
+                    </script>
+                  <% end %>
+                  <% end %>
+                <div class="col-lg-6">
+                  <%= form_for([:backoffice, @admin]) do |f| %>
+                <div class="form-group">
+                  <%= f.label :"Email" %><br />
+                  <%= f.email_field :email, :class => 'form-control', :placeholder => 'Email do Administrador' %><br />
+                  <%= f.label :"Password" %><br />
+                  <%= f.password_field :password, :class => 'form-control', :placeholder => 'Password do Administrador' %><br />
+                  <%= f.label :"Re-type Password" %><br />
+                  <%= f.password_field :password_confirmation, :class => 'form-control', :placeholder => 'Confirme o Password' %> <br />
+                  <%= f.submit "Salvar", :class => 'btn btn-default' %>
+                </div>
+                <% end %>
+              </div>

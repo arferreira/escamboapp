@@ -26,3 +26,15 @@ end
 puts "\n"
 puts "Categories generated with success!"
 puts "****************************************"
+puts "Create admin default for app"
+puts "****************************************"
+
+admin = Admin.new
+admin.email = "admin@admin.com"
+admin.password = "123456"
+admin.password_confirmation = "123456"
+if admin.save
+  puts "Admin created was success!"
+else
+  puts "Error Admin Create"
+end

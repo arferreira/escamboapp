@@ -1,0 +1,4 @@
+"pt-BR":
+  messages:
+    confirm: Tem certeza?
+    confirm_with: Tem certeza que deseja excluir <b>%{name}</b>

@@ -46,6 +46,7 @@ class Backoffice::AdminsController < BackofficeController
   def set_admin
     @admin = Admin.find_by(id: params[:id])
   end
+  
 
   def params_admin
     passwd = params[:admin][:password]
